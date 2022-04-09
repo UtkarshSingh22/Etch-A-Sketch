@@ -1,3 +1,7 @@
+function init(){
+    makeGrid();
+}
+
 function makeGrid(size = 10){
     
     for(let i = 0; i < size; i++){
@@ -12,7 +16,7 @@ function makeGrid(size = 10){
             const element = document.createElement('div');
             element.className = 'ele';
             element.classList.add = 'ele';
-            element.style.width = len+'px' ;
+            element.style.width = len+'px';
             row.appendChild(element);
         }
         grid.appendChild(row);
@@ -21,4 +25,4 @@ function makeGrid(size = 10){
 
 const grid = document.querySelector('.grid');
 
-makeGrid();
+init();
