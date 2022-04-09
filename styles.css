@@ -74,7 +74,7 @@ body{
 }
 .row{
     display: flex;
-    border: 2px solid black;
+
 }
 .ele{
     border: 1px solid black;
