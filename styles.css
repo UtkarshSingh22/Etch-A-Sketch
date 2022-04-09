@@ -26,6 +26,14 @@ body{
 .size{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+.input{
+    width: 80px;
+}
+.color{
+    display: flex;
+    flex-direction: column;
 }
 .header{
     display: flex;
