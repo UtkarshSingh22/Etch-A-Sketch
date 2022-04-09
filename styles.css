@@ -1,22 +1,29 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height:98vh;
+    font-family: monospace;
+    margin: 0;
 }
 .container{
     display: flex;
-    
+    justify-content: space-evenly;
+    padding: 80px;
+}
+.grid{
+    border: 2px solid black;
+    height: 500px;
+    width: 500px;
 }
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: monospace;
     font-size: 40px;
+    padding: 20px;
 }
 .footer{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
