@@ -1,6 +1,8 @@
 body{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height:98vh;
 }
 .container{
     display: flex;
@@ -10,7 +12,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     font-family: monospace;
     font-size: 40px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
