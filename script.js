@@ -1,8 +1,8 @@
 function init(){
-    makeGrid();
+    makeGrid(10);
 }
 
-function makeGrid(size = 10){
+function makeGrid(size){
     
     for(let i = 0; i < size; i++){
 
@@ -23,6 +23,22 @@ function makeGrid(size = 10){
     }
 }
 
+function buildGrid(){
+
+    while(grid.firstChild){
+        grid.removeChild(grid.lastChild);
+    }
+    const side = input.value;
+    if(side > 64){
+        side = 64;
+    }
+    makeGrid(side);
+}
+
 const grid = document.querySelector('.grid');
+const input = document.querySelector('.input');
+const submitBtn = document.querySelector('#submitBtn');
+
+submitBtn.addEventListener('click', buildGrid);
 
 init();
