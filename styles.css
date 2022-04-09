@@ -1,4 +1,8 @@
 body{
     display: flex;
-    flex-direction: ;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    
 }
