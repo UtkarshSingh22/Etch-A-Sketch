@@ -6,8 +6,9 @@ body{
 }
 .container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 80px;
+    gap: 20px;
 }
 .grid{
     border: 2px solid black;
@@ -17,7 +18,14 @@ body{
 .settings{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid black;
+    width: 500px;
+}
+.size{
+    display: flex;
+    flex-direction: column;
 }
 .header{
     display: flex;
@@ -31,7 +39,7 @@ body{
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 0%;
+    bottom: 1%;
     right: 0%;
     left: 0%;
 }
