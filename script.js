@@ -21,6 +21,10 @@ function makeGrid(size){
         }
         grid.appendChild(row);
     }
+    const allEles = Array.from(document.querySelectorAll('.ele'));
+    for(let i = 0; i < allEles.length; i++){
+        allEles[i].addEventListener('mouseenter', paintBlack);
+    }
 }
 
 function buildGrid(){
@@ -29,16 +33,29 @@ function buildGrid(){
         grid.removeChild(grid.lastChild);
     }
     const side = input.value;
-    if(side > 64){
-        side = 64;
-    }
     makeGrid(side);
+}
+
+function paint(e){
+    e.target.style.backgroundColor = 'pink';
+}
+
+function paintBlack(e){
+    e.target.style.backgroundColor = 'black';
+    paint();
 }
 
 const grid = document.querySelector('.grid');
 const input = document.querySelector('.input');
 const submitBtn = document.querySelector('#submitBtn');
+const blackBtn = document.querySelector('#blackBtn');
+const rainbowBtn = document.querySelector('#rainbowBtn');
 
 submitBtn.addEventListener('click', buildGrid);
+blackBtn.addEventListener('click', paintBlack);
+rainbowBtn.addEventListener('click', paint);
+
+
 
 init();
+
