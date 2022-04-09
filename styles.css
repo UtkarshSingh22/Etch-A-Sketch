@@ -14,6 +14,8 @@ body{
     border: 2px solid black;
     height: 500px;
     width: 500px;
+    display: flex;
+    flex-direction: column;
 }
 .settings{
     display: flex;
@@ -69,4 +71,11 @@ body{
     right: 0%;
     left: 0%;
     font-size: 18px;
+}
+.row{
+    display: flex;
+    border: 2px solid black;
+}
+.ele{
+    border: 1px solid black;
 }
