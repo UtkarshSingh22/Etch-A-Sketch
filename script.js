@@ -55,16 +55,26 @@ function callB(){
     }
 }
 
+function clearAll(){
+    const siz = allEles.length;
+    while(grid.firstChild){
+        grid.removeChild(grid.lastChild);
+    }
+    makeGrid(Math.sqrt(siz))
+    
+}
+
 const grid = document.querySelector('.grid');
 const input = document.querySelector('.input');
 const submitBtn = document.querySelector('#submitBtn');
 const blackBtn = document.querySelector('#blackBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
+const eraseBtn = document.querySelector('#eraseBtn');
 
 submitBtn.addEventListener('click', buildGrid);
-
 rainbowBtn.addEventListener('click', callR);
 blackBtn.addEventListener('click', callB);
+eraseBtn.addEventListener('click', clearAll);
 
 init();
 
