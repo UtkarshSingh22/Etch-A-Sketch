@@ -1,5 +1,6 @@
 function init(){
     makeGrid(10);
+    callB();
 }
 
 function makeGrid(size){
@@ -21,10 +22,8 @@ function makeGrid(size){
         }
         grid.appendChild(row);
     }
-    const allEles = Array.from(document.querySelectorAll('.ele'));
-    for(let i = 0; i < allEles.length; i++){
-        allEles[i].addEventListener('mouseenter', paintBlack);
-    }
+    allEles = Array.from(document.querySelectorAll('.ele'));
+    callB();
 }
 
 function buildGrid(){
@@ -36,13 +35,24 @@ function buildGrid(){
     makeGrid(side);
 }
 
-function paint(e){
+function paintRainbow(e){
     e.target.style.backgroundColor = 'pink';
 }
 
 function paintBlack(e){
     e.target.style.backgroundColor = 'black';
-    paint();
+}
+
+function callR(){
+    for(let i = 0; i < allEles.length; i++){
+        allEles[i].addEventListener('mouseenter', paintRainbow);
+    }
+}
+
+function callB(){
+    for(let i = 0; i < allEles.length; i++){
+        allEles[i].addEventListener('mouseenter', paintBlack);
+    }
 }
 
 const grid = document.querySelector('.grid');
@@ -52,10 +62,9 @@ const blackBtn = document.querySelector('#blackBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
 
 submitBtn.addEventListener('click', buildGrid);
-blackBtn.addEventListener('click', paintBlack);
-rainbowBtn.addEventListener('click', paint);
 
-
+rainbowBtn.addEventListener('click', callR);
+blackBtn.addEventListener('click', callB);
 
 init();
 
