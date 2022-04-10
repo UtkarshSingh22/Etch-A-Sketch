@@ -3,8 +3,8 @@ body{
     flex-direction: column;
     font-family: monospace;
     margin: 0;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #3cb9cf;
+    color: #ffffff;
 }
 .container{
     display: flex;
@@ -56,7 +56,7 @@ body{
     height: auto;
     border-radius: 8px;
     font-family: monospace;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
 }
 
 .header{
@@ -71,10 +71,11 @@ body{
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 1%;
+    bottom: 0%;
     right: 0%;
     left: 0%;
-    font-size: 18px;
+    font-size: 22px;
+    background-color: rgb(218, 211, 211);
 }
 .row{
     display: flex;
@@ -83,6 +84,7 @@ body{
     
 }
 .btn:hover{
-    border: 3px solid ;
-    background-color: #DCD6F7;
+    transform: scale(1.1);
+    border-radius: 10%;
+    background-color: #32f1d7;
 }
