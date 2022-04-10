@@ -35,6 +35,14 @@ function buildGrid(){
     makeGrid(side);
 }
 
+function clearAll(){
+    const siz = allEles.length;
+    while(grid.firstChild){
+        grid.removeChild(grid.lastChild);
+    }
+    makeGrid(Math.sqrt(siz));
+}
+
 function paintRainbow(e){
     e.target.style.backgroundColor = 'pink';
 }
@@ -53,15 +61,6 @@ function callB(){
     for(let i = 0; i < allEles.length; i++){
         allEles[i].addEventListener('mouseenter', paintBlack);
     }
-}
-
-function clearAll(){
-    const siz = allEles.length;
-    while(grid.firstChild){
-        grid.removeChild(grid.lastChild);
-    }
-    makeGrid(Math.sqrt(siz))
-    
 }
 
 const grid = document.querySelector('.grid');
