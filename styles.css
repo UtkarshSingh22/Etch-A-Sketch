@@ -3,8 +3,8 @@ body{
     flex-direction: column;
     font-family: monospace;
     margin: 0;
-    background-color: #3cb9cf;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
 }
 .container{
     display: flex;
