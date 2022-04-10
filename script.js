@@ -85,5 +85,3 @@ blackBtn.addEventListener('click', callB);
 eraseBtn.addEventListener('click', clearAll);
 
 init();
-
-console.log(Math.floor(Math.random()*(250 - 0 + 1) + 0));
