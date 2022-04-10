@@ -56,11 +56,17 @@ function paintBlack(e){
 
 function callR(){
     for(let i = 0; i < allEles.length; i++){
+        allEles[i].removeEventListener('mouseenter', paintBlack);
+    }
+    for(let i = 0; i < allEles.length; i++){
         allEles[i].addEventListener('mouseenter', paintRainbow);
     }
 }
 
 function callB(){
+    for(let i = 0; i < allEles.length; i++){
+        allEles[i].removeEventListener('mouseenter', paintRainbow);
+    }
     for(let i = 0; i < allEles.length; i++){
         allEles[i].addEventListener('mouseenter', paintBlack);
     }
