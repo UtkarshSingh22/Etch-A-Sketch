@@ -44,7 +44,10 @@ function clearAll(){
 }
 
 function paintRainbow(e){
-    e.target.style.backgroundColor = 'pink';
+    let a = Math.floor(Math.random()*(250 - 0 + 1) + 0);
+    let b = Math.floor(Math.random()*(250 - 0 + 1) + 0);
+    let c = Math.floor(Math.random()*(250 - 0 + 1) + 0);
+    e.target.style.backgroundColor = "rgb("+a+","+b+","+c+")";
 }
 
 function paintBlack(e){
@@ -77,3 +80,4 @@ eraseBtn.addEventListener('click', clearAll);
 
 init();
 
+console.log(Math.floor(Math.random()*(250 - 0 + 1) + 0));
