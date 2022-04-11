@@ -78,7 +78,7 @@ body{
     left: 0%;
     font-size: 22px;
     background-color: rgb(197, 197, 197);
-    color: black;
+    color: rgb(32, 95, 167);
 }
 .row{
     display: flex;
@@ -95,4 +95,9 @@ body{
 .input:hover{
     background-color: rgb(236, 202, 247);
     transform: scale(1.1);
+}
+
+.footer:hover{
+    color: darkmagenta;
+    background-color: rgb(100, 216, 237);
 }
